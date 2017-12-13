@@ -3,6 +3,8 @@ package user;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
@@ -22,10 +24,12 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.wha.springmvc.configuration.HelloWorldConfiguration;
 import com.wha.springmvc.configuration.JpaConfiguration;
+import com.wha.springmvc.model.Administrateur;
 import com.wha.springmvc.model.Client;
 import com.wha.springmvc.model.ClientPotentiel;
 import com.wha.springmvc.model.Conseiller;
 import com.wha.springmvc.model.DemandeOuverture;
+import com.wha.springmvc.model.Utilisateur;
 import com.wha.springmvc.service.UtilisateurService;
 
 @WebAppConfiguration
@@ -146,5 +150,19 @@ public class UtilisateurServiceTest {
 		int nbCons = uservice.findAllConseillers().size();
 		assertEquals(5, nbCons);
 	}
+//	
+//	@Transactional
+//	@Test
+//	@Rollback(true)
+//	public void connexionTest() {
+//		String login = "admin";
+//		String password = "admin";
+//		List<String> p = new ArrayList<String>() ;
+//		p.set(0, login);
+//		p.set(1, password);
+//		//uservice.con
+//		
+//	}
+	
 	
 }
